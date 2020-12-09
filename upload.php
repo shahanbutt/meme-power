@@ -54,23 +54,18 @@
   if (isset($_POST['Submit1'])) {
     // print_r($_POST);exit;
     $temp = explode(".", $_FILES["file"]["name"]);
-    $newfilename = 'meme' . '.' . end($temp);
-    if (move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $newfilename)) {
+    $newfilename = 'meme' . '.png';
+    move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $newfilename);
+  }
   ?>
       <div class="gallery">
         <div class="gallery-background">
           <div class="text">
             <?php echo $_POST['uploader']; ?>
           </div>
-          <img src="<?php echo  "images/" . $newfilename; ?>" />
+          <img src="images/meme.png" />
         </div>
       </div>
-  <?php
-    } else {
-      echo "Error !!";
-    }
-  }
-  ?>
 </body>
 <script>
   $(function() {

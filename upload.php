@@ -45,7 +45,7 @@
       padding: 10px 10px;
     }
   </style>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </head>
 

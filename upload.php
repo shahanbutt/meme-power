@@ -60,10 +60,13 @@
   ?>
       <div class="gallery">
         <div class="gallery-background">
+        
+          <img src="images/meme.png" />
+       
           <div class="text">
             <?php echo $_POST['uploader']; ?>
           </div>
-          <img src="images/meme.png" />
+
         </div>
       </div>
 </body>

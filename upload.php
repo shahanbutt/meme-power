@@ -1,6 +1,9 @@
 <html>
 
 <head>
+
+<meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
+
   <title>MemePower</title>
   <style>
     html {
@@ -76,6 +79,9 @@
   }
   fclose($fh);
   
+  $page = $_SERVER['PHP_SELF'];
+  $sec = "10";
+
   ?>
       <div class="gallery">
         <div class="gallery-background">

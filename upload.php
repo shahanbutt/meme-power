@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<meta http-equiv="refresh" content="5">
+<meta http-equiv="refresh" content="30">
   <title>MemePower</title>
   <style>
     html {

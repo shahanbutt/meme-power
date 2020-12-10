@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<meta http-equiv="refresh" content="30">
   <title>MemePower</title>
   <style>
     html {
@@ -51,12 +52,31 @@
 
 <body>
   <?php
-  if (isset($_POST['Submit1'])) {
+
+  if (isset($_POST['Submit1'])) 
+  {
     // print_r($_POST);exit;
     $temp = explode(".", $_FILES["file"]["name"]);
     $newfilename = 'meme' . '.png';
-    move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $newfilename);
+    move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $newfilename);      
+  
+  
+    $file = 'name.txt';
+    // Open the file to get existing content
+    $current = file_get_contents($file);
+    // Append a new person to the file
+    $current = $_POST['uploader'];
+    // Write the contents back to the file
+    file_put_contents($file, $current);
   }
+
+  $fh = fopen('name.txt','r');
+  while ($line = fgets($fh)) 
+  {
+    $_POST['uploader'] = $line;
+  }
+  fclose($fh);
+ 
   ?>
       <div class="gallery">
         <div class="gallery-background">
